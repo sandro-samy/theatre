@@ -8,7 +8,6 @@ import SearchNav from "../../UI/Search/SearchNav";
 const navData = [
   { title: "Home", Icon: HiOutlineHome, url: "/" },
   { title: "Trending", Icon: BsLightning, url: "/?genre=fetchTrending" },
-  // { title: "Collection", Icon: HiOutlineCollection, url: "/collection" },
   { title: "Search", Icon: BsSearch, url: '?search=""' },
 ];
 
