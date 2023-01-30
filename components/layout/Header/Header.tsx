@@ -35,7 +35,7 @@ const Header = () => {
         href={"/"}
         className="text-white font-bebas tracking-widest font-extrabold text-5xl"
       >
-        Sulu
+        Theatre
       </Link>
     </header>
   );

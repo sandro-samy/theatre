@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "theatre",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
