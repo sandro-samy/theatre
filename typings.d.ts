@@ -5,7 +5,7 @@ interface IMovie {
   genre_ids: number[];
   id: number;
   title?: string;
-  release_data?: string;
+  release_date?: string;
   media_type: string;
   name: string;
   origin_country: string[];
