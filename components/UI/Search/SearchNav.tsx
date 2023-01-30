@@ -11,7 +11,7 @@ const SearchNav = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/search?query=${value.split(" ").join("+")}`);
+    router.push(`/search?query=${value.trim().toLowerCase().split(" ").join("+")}`);
     setValue("");
     setIsOpen(false);
   };
