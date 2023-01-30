@@ -13,8 +13,9 @@ const navData = [
 
 const Header = () => {
   return (
-    <header className="flex flex-col md:flex-row justify-between items-center p-5">
-      <div className="flex flex-grow justify-evenly max-w-2xl mb-3">
+    <header className="grid grid-cols-1 md:grid-cols-3 justify-between items-center p-5">
+      <div className="col-span-1 invisible md:visible"></div>
+      <div className="flex justify-evenly max-w-2xl mb-3 col-span-1 md:order-3">
         {navData.map(
           ({
             title,
@@ -36,7 +37,7 @@ const Header = () => {
       </div>
       <Link
         href={"/"}
-        className="text-white font-bebas tracking-widest font-extrabold text-5xl"
+        className="text-white font-bebas tracking-widest font-extrabold text-5xl col-span-1 text-center"
       >
         Theatre
       </Link>

@@ -61,7 +61,7 @@ const Pagination = ({
                       : "bg-white/10 text-white"
                   } relative rounded-md ${
                     !pagesArray.includes(1) ? "mr-2" : "mr-0"
-                  } hover:scale-110`}
+                  } hover:scale-110 transition-transform duration-100 ease-in hover:drop-shadow-lg`}
                   onClick={() => routerHandler(1)}
                 >
                   <span className="absolute inset-0 flex justify-center items-center text-xl">
@@ -76,7 +76,7 @@ const Pagination = ({
                   currentPage === page
                     ? "bg-white text-black"
                     : "bg-white/10 text-white"
-                } relative rounded-md`}
+                } relative rounded-md hover:scale-110 transition-transform duration-100 ease-in hover:drop-shadow-lg`}
                 key={"page " + page}
                 onClick={() => routerHandler(page)}
               >
@@ -94,7 +94,7 @@ const Pagination = ({
                       : "bg-white/10 text-white"
                   } relative rounded-md ${
                     !pagesArray.includes(pages) ? "ml-2" : "ml-0"
-                  }`}
+                  } hover:scale-110 transition-transform duration-100 ease-in hover:drop-shadow-lg`}
                   onClick={() => routerHandler(pages)}
                 >
                   <span className="absolute inset-0 flex justify-center items-center text-xl">
