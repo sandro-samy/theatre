@@ -3,11 +3,12 @@ import { HiOutlineCollection, HiOutlineHome } from "react-icons/hi";
 import { BsLightning, BsSearch } from "react-icons/bs";
 import HeaderItem from "./HeaderItem";
 import Link from "next/link";
+import SearchNav from "../../UI/Search/SearchNav";
 
 const navData = [
   { title: "Home", Icon: HiOutlineHome, url: "/" },
   { title: "Trending", Icon: BsLightning, url: "/?genre=fetchTrending" },
-  { title: "Collection", Icon: HiOutlineCollection, url: "/collection" },
+  // { title: "Collection", Icon: HiOutlineCollection, url: "/collection" },
   { title: "Search", Icon: BsSearch, url: '?search=""' },
 ];
 
@@ -24,11 +25,14 @@ const Header = () => {
             title: string;
             Icon: React.ElementType;
             url: string;
-          }) => (
-            <Link href={url}>
-              <HeaderItem key={title} title={title} Icon={Icon} />
-            </Link>
-          )
+          }) =>
+            title !== "Search" ? (
+              <Link href={url} key={title}>
+                <HeaderItem key={title} title={title} Icon={Icon} />
+              </Link>
+            ) : (
+              <SearchNav key={title} />
+            )
         )}
       </div>
       <Link

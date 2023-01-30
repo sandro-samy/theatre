@@ -15,7 +15,6 @@ const Stars = ({
   length?: number;
 }) => {
   const starsArray = Array(length).fill(0);
-  console.log(starsArray);
 
   for (let i = 0; i <= rating; i++) {
     if (rating - i > 0) {
